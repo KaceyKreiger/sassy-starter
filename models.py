@@ -1,4 +1,4 @@
-import uuid
+import*uuid
 from django.db import models
 
 class EmailDigest(models.Model):
@@ -49,4 +49,4 @@ class UnSubscription(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     changed_at = models.DateTimeField(auto_now=True)
     subscription = models.ForeignKey(Subscription, on_delete=models.CASCADE)
-    from_digest = models.ForeignKey(EmailDigest, on_delete=models.CASCADE, null=True)
+    from_digest = models.ForeignKey(EmailDigest, on_delete=models.CASCADE, null=True) 
